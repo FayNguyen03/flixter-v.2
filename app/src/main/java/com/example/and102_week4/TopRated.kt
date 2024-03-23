@@ -1,6 +1,12 @@
 package com.example.and102_week4
+import android.support.annotation.Keep
 import com.google.gson.annotations.SerializedName
-class TopRated {
+import kotlinx.serialization.SerialName
+import kotlinx.serialization.Serializable
+
+@Keep
+@Serializable
+class TopRated: java.io.Serializable {
     @JvmField
     @SerializedName("original_title")
     var nameMovie: String? = null

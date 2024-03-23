@@ -10,6 +10,6 @@ class MainActivity : AppCompatActivity() {
             setContentView(R.layout.activity_main)
             val supportFragmentManager = supportFragmentManager
             val fragmentTransaction = supportFragmentManager.beginTransaction()
-            fragmentTransaction.replace(id.content, TopRated(), null).commit()
+            fragmentTransaction.replace(id.content, TopRatedFragment(), null).commit()
     }
 }

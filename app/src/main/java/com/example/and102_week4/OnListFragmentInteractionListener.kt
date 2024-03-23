@@ -10,4 +10,3 @@ import androidx.recyclerview.widget.RecyclerView
         abstract fun RequestParam(): Any
     }
 
-}
