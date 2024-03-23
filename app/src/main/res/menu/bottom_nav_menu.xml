@@ -3,11 +3,8 @@
 
     <item android:title="Top Rated"
         android:id="@+id/top_rated"
-        android:icon="@drawable/baseline_home_24"/>
     <item android:title="News"
         android:id="@+id/news"
-        android:icon="@drawable/baseline_newspaper_24"/>
     <item android:title="Horoscope"
         android:id="@+id/horoscope"
-        android:icon="@drawable/baseline_h_mobiledata_24"/>
 </menu>

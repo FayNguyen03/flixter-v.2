@@ -6,7 +6,7 @@
     android:layout_height="match_parent">
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/topPoster"
         android:layout_width="300dp"
         android:layout_height="450dp"
         android:layout_marginStart="55dp"
@@ -18,7 +18,7 @@
         app:srcCompat="@drawable/loading" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/topTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="178dp"
@@ -27,5 +27,5 @@
         android:text="TextView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+        app:layout_constraintTop_toBottomOf="@+id/topPoster" />
 </androidx.constraintlayout.widget.ConstraintLayout>
