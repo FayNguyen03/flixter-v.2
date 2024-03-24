@@ -9,8 +9,14 @@ class MainActivity : AppCompatActivity() {
             super.onCreate(savedInstanceState)
             setContentView(R.layout.activity_main)
             val supportFragmentManager = supportFragmentManager
-            val fragmentTransaction = supportFragmentManager.beginTransaction()
-            fragmentTransaction.replace(id.container,TopRatedFragment(), null).commit()
+        supportFragmentManager.beginTransaction()
+            .replace(R.id.container1, TopRatedFragment())
+            .commit()
+
+        // Add or replace the second fragment
+        supportFragmentManager.beginTransaction()
+            .replace(R.id.container2, NowPlayingFragment())
+            .commit()
 
     }
 }

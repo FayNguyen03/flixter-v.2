@@ -32,9 +32,9 @@ class NowPlayingFragment: Fragment(), OnListFragmentInteractionListener {
         val view = inflater.inflate(R.layout.fragment_top_movie_list, container, false)
         recyclerView = view.findViewById<View>(R.id.nowPlaying) as RecyclerView
         val context = view.context
-        recyclerView.layoutManager = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, true)
-        Log.d("NowPlaingFragment","Initialize")
-        updateAdapterNow(recyclerView,page)
+        recyclerView.layoutManager = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
+        Log.d("NowPlayingFragment","Initialize")
+        updateAdapter(recyclerView,page)
         scrollListener = object : EndlessRecyclerViewScrollListener(recyclerView.layoutManager as LinearLayoutManager) {
             override fun onLoadMore(page: Int, totalItemsCount: Int, view: RecyclerView) {
                 loadNextDataFromApi()
@@ -46,7 +46,7 @@ class NowPlayingFragment: Fragment(), OnListFragmentInteractionListener {
         return view
     }
 
-    private fun updateAdapterNow(recyclerView: RecyclerView, page: Int = 1) {
+    private fun updateAdapter(recyclerView: RecyclerView, page: Int = 1) {
 
         // Create and set up an AsyncHTTPClient() here
         val client = AsyncHttpClient()
@@ -88,10 +88,7 @@ class NowPlayingFragment: Fragment(), OnListFragmentInteractionListener {
 
     }
 
-    /*
-     * When we click a movie
-     * Override from OnListFragmentInteraction
-     */
+
     fun onItemClick(item: NowPlayingMovie) {
         Toast.makeText(context, "Release date: " + item.date, Toast.LENGTH_SHORT).show()
     }
@@ -107,7 +104,7 @@ class NowPlayingFragment: Fragment(), OnListFragmentInteractionListener {
 
     private fun loadNextDataFromApi() {
         page += 1
-        updateAdapterNow(recyclerView,page)
+        updateAdapter(recyclerView,page)
     }
 
 
