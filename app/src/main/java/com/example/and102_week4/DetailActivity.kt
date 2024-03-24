@@ -27,7 +27,7 @@ class DetailActivity : AppCompatActivity() {
         val movie=intent.getSerializableExtra(MOVIE_EXTRA) as TopRated
         // TODO: Set the title, byline, and abstract information from the article
         titleTextView.text = movie.nameMovie
-        countryTextView.text= movie.country
+        countryTextView.text= movie.country.toString() + " people are watching"
         summaryTextView.text = movie.summary
         // TODO: Load the media image
         Glide.with(this)

@@ -1,12 +1,8 @@
 package com.example.and102_week4
-import android.support.annotation.Keep
-import com.google.gson.annotations.SerializedName
-import kotlinx.serialization.SerialName
-import kotlinx.serialization.Serializable
 
-@Keep
-@Serializable
-class TopRated: java.io.Serializable {
+import com.google.gson.annotations.SerializedName
+
+class NowPlayingMovie {
     @JvmField
     @SerializedName("original_title")
     var nameMovie: String? = null
@@ -18,12 +14,9 @@ class TopRated: java.io.Serializable {
     @SerializedName("poster_path")
     var movieUrl: String? = null
 
-    @SerializedName("first_air_date")
+    @SerializedName("release_date")
     var date: String? = null
 
     @SerializedName("vote_average")
     var vote:Double?=null
-
-    @SerializedName("popularity")
-    var country:Number?=null
 }
