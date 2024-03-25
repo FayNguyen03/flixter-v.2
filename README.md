@@ -1,6 +1,6 @@
 # Android Project 4 - *Flixter+ .v2*
 
-Submitted by: **Your Name Here**
+Submitted by: **KTNT**
 
 **Flixter+ .v2** is a movie browsing app that allows users to browse movies from the Movie DB website.
 Time spent: **6** hours spent in total

@@ -1,6 +1,7 @@
 package com.example.and102_week4
 
 import android.content.Intent
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -37,7 +38,7 @@ class NowPlayingRecyclerViewAdapter(
 
         holder.mItem = movie
         holder.mMovieTitle.text = movie.nameMovie
-
+        Log.d("Debugging",movie.nameMovie.toString())
         holder.itemView.setOnLongClickListener {
             Toast.makeText(holder.itemView.context, "Vote " + movie.vote.toString(), Toast.LENGTH_LONG).show()
             true // Indicate that the long click was consumed

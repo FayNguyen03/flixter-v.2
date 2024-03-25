@@ -32,7 +32,7 @@ class NowPlayingFragment: Fragment(), OnListFragmentInteractionListener {
         val view = inflater.inflate(R.layout.fragment_top_movie_list, container, false)
         recyclerView = view.findViewById<View>(R.id.nowPlaying) as RecyclerView
         val context = view.context
-        recyclerView.layoutManager = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
+        recyclerView.layoutManager = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL,true)
         Log.d("NowPlayingFragment","Initialize")
         updateAdapter(recyclerView,page)
         scrollListener = object : EndlessRecyclerViewScrollListener(recyclerView.layoutManager as LinearLayoutManager) {
@@ -81,7 +81,7 @@ class NowPlayingFragment: Fragment(), OnListFragmentInteractionListener {
 
                         // If the error is not null, log it!
                         t?.message?.let {
-                            Log.e("MoviesFragment", errorResponse)
+                            Log.e("NowFragment", errorResponse)
                         }
                     }
                 }]

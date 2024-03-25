@@ -2,6 +2,7 @@ package com.example.and102_week4
 
 import android.app.Activity
 import android.content.Intent
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -69,6 +70,7 @@ class TopRatedRecyclerViewAdapter (
         holder.mItem = movie
         holder.mMovieTitle.text = movie.nameMovie
         holder.mMovieRate.text=movie.vote.toString()
+        Log.d("Debugging 2",movie.nameMovie.toString())
 
         holder.itemView.setOnLongClickListener {
             Toast.makeText(holder.itemView.context, "Vote " + movie.vote.toString(), Toast.LENGTH_LONG).show()
