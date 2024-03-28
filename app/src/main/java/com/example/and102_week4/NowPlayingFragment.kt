@@ -29,10 +29,10 @@ class NowPlayingFragment: Fragment(), OnListFragmentInteractionListener {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val view = inflater.inflate(R.layout.fragment_top_movie_list, container, false)
+        val view = inflater.inflate(R.layout.fragment_now_playing_list, container, false)
         recyclerView = view.findViewById<View>(R.id.nowPlaying) as RecyclerView
         val context = view.context
-        recyclerView.layoutManager = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL,true)
+        recyclerView.layoutManager = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL,false)
         Log.d("NowPlayingFragment","Initialize")
         updateAdapter(recyclerView,page)
         scrollListener = object : EndlessRecyclerViewScrollListener(recyclerView.layoutManager as LinearLayoutManager) {
